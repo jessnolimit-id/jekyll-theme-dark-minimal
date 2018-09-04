@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-gemspec
 
 gem 'font-awesome-sass', '~> 5.3.1'
+gem 'milligram', '~> 1.3.0.0'
 gem 'jekyll-paginate'
+
+gemspec
