@@ -7,12 +7,6 @@
  * created: JAN 2018
  */
 
-@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono')
-
-$fa-font-path: '../fonts/font-awesome'
-@import 'font-awesome/font-awesome'
-@import 'milligram/milligram'
-
 @import 'colors'
 
 
@@ -20,7 +14,6 @@ html
   background-color: $site-background
 
 body
-  @extend .container
   color:       $body-fg
   font-family: 'Share Tech Mono', monospace
 
@@ -61,8 +54,6 @@ a, a:active, a:visited, a:link
     background-color: $site-accent
     color:            white
   &[target=_blank] i
-    @extend .fas
-    @extend .fa-external-link-alt
     margin-left: 0.4em
     font-size:   0.7em
 

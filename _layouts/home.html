@@ -17,18 +17,18 @@ layout: base
     <p class="pagination">
       {% if paginator.previous_page %}
         <a href="{{ paginator.previous_page_path }}">
-            <i class="fas fa-backward"></i></a>
+            <i class="fa fa-backward"></i></a>
       {% else %}
-        <i class="fas fa-backward"></i>
+        <i class="fa fa-backward"></i>
       {% endif %}
 
       {{ paginator.page }} of {{ paginator.total_pages }}
 
       {% if paginator.next_page %}
         <a href="{{ paginator.next_page_path }}">
-            <i class="fas fa-forward"></i></a>
+            <i class="fa fa-forward"></i></a>
       {% else %}
-        <i class="fas fa-forward"></i>
+        <i class="fa fa-forward"></i>
       {% endif %}
     </p>
 </main>
