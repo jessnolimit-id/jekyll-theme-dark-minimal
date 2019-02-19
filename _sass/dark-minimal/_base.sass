@@ -8,6 +8,7 @@
  */
 
 @import 'colors'
+@import 'utils'
 
 
 html
@@ -16,6 +17,9 @@ html
 body
   color:       $body-fg
   font-family: 'Share Tech Mono', monospace
+
+.container
+  max-width: 88rem
 
 header
   background-color: white
@@ -28,8 +32,14 @@ header
     word-break: break-all
 
 footer
+  margin-bottom: 1em
   font-size:  0.7em
-  text-align: center
+  i
+    margin-left: 0 !important
+
+@media(min-width:640px)
+  p.column.maybe-right:nth-child(2)
+    text-align: right
 
 h1, h2, h3, h4, h5, h6
   color: $header-fg
@@ -46,8 +56,22 @@ h1, h2, h3, h4, h5, h6
     color:   $body-minor
     display: inline-block
 
-p, ol, ul
+.post-listing-info
+  @extend .post-title
+  border-bottom: none
+  margin-bottom: 0
+  h1, h2, h3
+    margin-bottom: 0.2em
+  p
+    font-size: 1em
+  div>div
+    display: inline-block
+
+p, li.bigger
   font-size:   1.2em
+
+li p
+  display: inline
 
 small
   color:     $body-minor !important
@@ -69,13 +93,37 @@ a, a:active, a:visited, a:link
     margin-left: 0.4em
     font-size:   0.7em
 
+pre
+  border-left: 0.3em solid $site-accent
+  background:  #23241f
+
+code
+  border-bottom: inherit
+  white-space: normal
+  &.highlighter-rouge
+    background-color: #23241f
+    color:            white
+
+
 img
-  border:  4px solid $site-accent
-  display: block
-  margin:  auto
+  background-color: white
+  border:           4px solid $site-accent
+  display:          block
+  margin:           auto
 
 code
   color: $site-background
 
 .pagination
-  text-align: center
+  @extend .text-center
+
+iframe
+  display: block
+  margin: auto auto 1em auto
+
+.tag-panel
+  flex-wrap: wrap
+  .column
+    margin-bottom: 1.7em
+    @media(max-width:640px)
+      max-width: 100% !important
